@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+  <style>
+  h1{
+    color: rgb(38, 0, 255);
+  }
+  .image {
+    background-image: url('https://images.unsplash.com/photo-1580587771525-78b9dba3b914?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=667&q=80');
+    height: 100%; 
+
+/* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  body{
+    height: 100%;
+    margin: 0;
+  }
+  html{
+    height: 100%;
+    margin :0;
+  }
+  
+
+
+</style></head>
+
+
+<body>
+
+  <div class="image" >
+
+<h1>City wise house Rant Prediction in India</h1>
+
+<p>The select element is used to create a drop-down list.</p>
+
+<form action="/predict" method="POST">
+  <label for="city">Choose a city:</label>
+  <select name="city" id="city">
+    <option value="mumbai">Mumbai</option>
+    <option value="pune">Pune</option>
+    <option value="chennai">Chennai</option>
+    <option value="bangalore">Bangalore</option>
+    <option value="hyderabad">Hyderabad</option>
+    <option value="Ahmedabad">Ahmedabad</option>
+    <option value="ncr">Delhi</option>
+    <option value="Trivandraum">Trivandraum</option>
+  </select>
+  <br><br>
+  <label for="BHKS">Select no.of bedrooms,hall and kichen:</label>
+  <select name="BHKS" id="BHKS">
+    <option value=1.0>1</option>
+    <option value=2.0>2</option>
+    <option value=3.0>3</option>
+    <option value=4.0>4</option>
+    <option value=5.0>5</option>
+    <option value=6.0>6</option>
+    <option value=7.0>7</option>
+    <option value=8.0>8</option>
+    <option value=9.0>9</option>
+    <option value=10.0>10</option>
+    <option value=11.0>11</option>
+    <option value=12.0>12</option>
+    <option value=13.0>13</option>
+    <option value=14.0>14</option>
+    <option value=15.0>15</option>
+    <option value=16.0>16</option>
+    <option value=17.0>17</option>
+    <option value=18.0>18</option>
+    <option value=19.0>19</option>
+    <option value=20.0>20</option>
+    <option value=21.0>21</option>
+    <option value=22.0>22</option>
+    <option value=23.0>23</option>
+    <option value=24.0>24</option>
+    <option value=25.0>25</option>
+    <option value=26.0>26</option>
+    <option value=27.0>27</option>
+    <option value=28.0>28</option>
+    <option value=29.0>29</option>
+    <option value=30.0>30</option>
+    <option value=31.0>31</option>
+    <option value=32.0>32</option>
+    <option value=33.0>33</option>
+    <option value=34.0>34</option>
+    <option value=35.0>35</option>
+    <option value=36.0>36</option>
+    <option value=37.0>37</option>
+    <option value=38.0>38</option>
+    <option value=39.0>39</option>
+    <option value=40.0>40</option>
+    <option value=41.0>41</option>
+    <option value=42.0>42</option>
+    <option value=43.0>43</option>
+    <option value=44.0>44</option>
+    <option value=45.0>45</option>
+    <option value=46.0>46</option>
+    <option value=47.0>47</option>
+    <option value=48.0>48</option>
+    <option value=49.0>49</option>
+    <option value=50.0>50</option>
+  </select>
+  <br><br>
+  <label for="sqft_per_inch">area in sq.ft(Maximum range is 2525):</label>
+  <input type="number" id="sqft_per_inch" name="sqft_per_inch"><br><br>
+  </select>
+  <br><br>
+  <label for="build_up_area">Choose type of area:</label>
+  <select name="build_up_area" id="build_up_area">
+    <option value=" Carpet Area"> Carpet Area</option>
+    <option value=" super built-up area"> Super built up area</option>
+    <option value=" Built-up Area"> Built up Area</option>
+    <option value=" plot area"> Plot area</option>
+  </select>
+  <br><br>
+  <label for="Type_of_property">Choose type of property:</label>
+  <select name="Type_of_property" id="Type_of_property">
+    <option value=" Residential"> Residential</option>
+    <option value=" Independent"> Independent</option>
+    <option value=" Studio"> Studio</option>
+    <option value=" Farm"> Farm</option>
+  </select>
+  <br><br>
+  <label for="location_of_the_property">Location of the property:</label>
+  <input type="text" id="location_of_the_property" name="location_of_the_property"><br><br>
+  </select>
+  
+  <br><br>
+  <label for="deposit">Deposit(in rs):</label>
+  <input type="number" id="area_sq.ft" name="area_sq.ft"><br><br>
+  </select>
+  <br><br>
+   
+  
+  <input type="submit" value="Submit">
+</form>
+
+<h1> {{ prediction_text }}</h1>
+
+<p>Click the "Submit" button and the form-data will be sent to a page on the 
+server called "action_page.php".</p>
+
+</body>
+</html>
